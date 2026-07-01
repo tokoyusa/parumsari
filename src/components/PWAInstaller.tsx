@@ -73,7 +73,7 @@ export default function PWAInstaller() {
           <ArrowDownToLine className="w-5 h-5 text-amber-300 animate-bounce" />
         </div>
         <div className="space-y-0.5 text-center sm:text-left">
-          <h4 className="font-bold text-sm font-display tracking-tight">Pasang Aplikasi Pasar Tegalsari</h4>
+          <h4 className="font-bold text-sm font-display tracking-tight">Pasang Aplikasi PARUMSARI</h4>
           <p className="text-[10px] text-emerald-100">Dapatkan akses instan, loading super ringan, dan gunakan seperti aplikasi seluler asli!</p>
         </div>
       </div>
