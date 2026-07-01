@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <defs>
+    <!-- Background Gradient: Vibrant chartreuse/lime-green with lighting from top-left -->
+    <radialGradient id="bgGrad" cx="30%" cy="20%" r="90%">
+      <stop offset="0%" stop-color="#def802" />
+      <stop offset="55%" stop-color="#b5cd03" />
+      <stop offset="85%" stop-color="#8ba001" />
+      <stop offset="100%" stop-color="#6e8000" />
+    </radialGradient>
+
+    <!-- Front Surface Gold Gradient: Rich metallic highlights and deep gold tones -->
+    <linearGradient id="goldFill" x1="15%" y1="0%" x2="85%" y2="100%">
+      <stop offset="0%" stop-color="#fffbea" />
+      <stop offset="20%" stop-color="#fce282" />
+      <stop offset="45%" stop-color="#e3ab1b" />
+      <stop offset="65%" stop-color="#9a6e05" />
+      <stop offset="85%" stop-color="#fdf3b4" />
+      <stop offset="100%" stop-color="#bf8c0d" />
+    </linearGradient>
+
+    <!-- Bevel Edge/Stroke Gold Gradient: Enhances the 3D outline with high contrast -->
+    <linearGradient id="goldEdge" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#503701" />
+      <stop offset="30%" stop-color="#aa7e10" />
+      <stop offset="50%" stop-color="#fff1b0" />
+      <stop offset="75%" stop-color="#845c03" />
+      <stop offset="100%" stop-color="#fffae0" />
+    </linearGradient>
+
+    <!-- 3D Extrusion Side-Wall Gradient: Deep bronze and dark metallic amber for realistic thickness -->
+    <linearGradient id="goldExtrude" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#604603" />
+      <stop offset="25%" stop-color="#433001" />
+      <stop offset="50%" stop-color="#73540a" />
+      <stop offset="75%" stop-color="#2a1e01" />
+      <stop offset="100%" stop-color="#4d3701" />
+    </linearGradient>
+
+    <!-- High-Gloss White Highlight Overlay for glass/metallic reflection -->
+    <linearGradient id="glossHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6" />
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.25" />
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.0" />
+    </linearGradient>
+
+    <!-- Soft, realistic 3D Drop Shadow cast by the floating letter onto the background -->
+    <filter id="pwaShadow" x="-30%" y="-15%" width="160%" height="140%">
+      <feDropShadow dx="24" dy="56" stdDeviation="36" flood-color="#1e2801" flood-opacity="0.8" />
+      <feDropShadow dx="8" dy="16" stdDeviation="12" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+
+    <!-- Sunburst Beam Overlay from the top-left -->
+    <linearGradient id="beamGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1080" height="1920" fill="url(#bgGrad)" />
+
+  <!-- Rays of Light shining from top-left corner -->
+  <g transform="translate(0, 0)">
+    <polygon points="0,0 250,1920 0,1920" fill="url(#beamGrad)" />
+    <polygon points="0,0 600,1920 350,1920" fill="url(#beamGrad)" />
+    <polygon points="0,0 1000,1920 750,1920" fill="url(#beamGrad)" />
+    <polygon points="0,0 1080,1500 1080,1200" fill="url(#beamGrad)" />
+    <polygon points="0,0 1080,900 1080,600" fill="url(#beamGrad)" />
+    <polygon points="0,0 1080,350 1080,150" fill="url(#beamGrad)" />
+  </g>
+
+  <!-- Centered Content Group with Drop Shadow -->
+  <g filter="url(#pwaShadow)">
+    
+    <!-- Large Golden "P" Logo (Centered around X=540, Y=800) -->
+    <g transform="translate(234, 460) scale(1.2)">
+      
+      <!-- 1. DEEP 3D EXTRUSION LAYER (Shifted down and right to form the volumetric depth) -->
+      <g transform="translate(7, 12)">
+        <!-- Upper Outer Frame & Loop -->
+        <path d="M 135,230 L 135,85 L 320,85 C 395,85 415,150 415,220 C 415,290 395,355 320,355 L 242,355 L 242,322 L 320,322 C 370,322 382,275 382,220 C 382,165 370,118 320,118 L 168,118 L 168,230 Z" 
+              fill="url(#goldExtrude)" stroke="url(#goldExtrude)" stroke-width="4" stroke-linejoin="round" />
+        <!-- Inner Stem Vertical Bar 1 -->
+        <path d="M 175,118 L 205,118 L 205,220 L 175,220 Z" 
+              fill="url(#goldExtrude)" stroke="url(#goldExtrude)" stroke-width="4" stroke-linejoin="round" />
+        <!-- Inner Stem Vertical Bar 2 -->
+        <path d="M 212,118 L 242,118 L 242,220 L 212,220 Z" 
+              fill="url(#goldExtrude)" stroke="url(#goldExtrude)" stroke-width="4" stroke-linejoin="round" />
+        <!-- Middle Concentric Loop -->
+        <path d="M 212,118 L 242,118 C 310,118 365,160 365,220 C 365,280 310,322 242,322 L 212,322 L 212,292 L 242,292 C 290,292 335,260 335,220 C 335,180 290,148 242,148 L 212,148 Z" 
+              fill="url(#goldExtrude)" stroke="url(#goldExtrude)" stroke-width="4" stroke-linejoin="round" />
+        <!-- Inner Concentric Loop -->
+        <path d="M 242,148 L 262,148 C 295,148 315,180 315,220 C 315,260 295,292 262,292 L 242,292 L 242,262 L 262,262 C 275,262 285,240 285,220 C 285,200 275,178 262,178 L 242,178 Z" 
+              fill="url(#goldExtrude)" stroke="url(#goldExtrude)" stroke-width="4" stroke-linejoin="round" />
+        <!-- Bottom Stem with U-channel -->
+        <path d="M 135,290 L 135,455 L 242,455 L 242,290 L 212,290 L 212,415 C 212,415 212,425 202,425 L 175,425 C 165,425 165,415 165,415 L 165,290 Z" 
+              fill="url(#goldExtrude)" stroke="url(#goldExtrude)" stroke-width="4" stroke-linejoin="round" />
+        <!-- Elegant Swoosh -->
+        <path d="M 95,340 C 100,310 130,250 205,242 C 265,232 315,190 315,190 C 315,190 285,220 235,245 C 175,275 120,305 95,340 Z" 
+              fill="url(#goldExtrude)" stroke="url(#goldExtrude)" stroke-width="4" stroke-linejoin="round" />
+      </g>
+
+      <!-- 2. FRONT METALLIC LAYER (The golden face with bevel stroke) -->
+      <g>
+        <!-- Upper Outer Frame & Loop -->
+        <path d="M 135,230 L 135,85 L 320,85 C 395,85 415,150 415,220 C 415,290 395,355 320,355 L 242,355 L 242,322 L 320,322 C 370,322 382,275 382,220 C 382,165 370,118 320,118 L 168,118 L 168,230 Z" 
+              fill="url(#goldFill)" stroke="url(#goldEdge)" stroke-width="1.5" stroke-linejoin="round" />
+        <!-- Inner Stem Vertical Bar 1 -->
+        <path d="M 175,118 L 205,118 L 205,220 L 175,220 Z" 
+              fill="url(#goldFill)" stroke="url(#goldEdge)" stroke-width="1.5" stroke-linejoin="round" />
+        <!-- Inner Stem Vertical Bar 2 -->
+        <path d="M 212,118 L 242,118 L 242,220 L 212,220 Z" 
+              fill="url(#goldFill)" stroke="url(#goldEdge)" stroke-width="1.5" stroke-linejoin="round" />
+        <!-- Middle Concentric Loop -->
+        <path d="M 212,118 L 242,118 C 310,118 365,160 365,220 C 365,280 310,322 242,322 L 212,322 L 212,292 L 242,292 C 290,292 335,260 335,220 C 335,180 290,148 242,148 L 212,148 Z" 
+              fill="url(#goldFill)" stroke="url(#goldEdge)" stroke-width="1.5" stroke-linejoin="round" />
+        <!-- Inner Concentric Loop -->
+        <path d="M 242,148 L 262,148 C 295,148 315,180 315,220 C 315,260 295,292 262,292 L 242,292 L 242,262 L 262,262 C 275,262 285,240 285,220 C 285,200 275,178 262,178 L 242,178 Z" 
+              fill="url(#goldFill)" stroke="url(#goldEdge)" stroke-width="1.5" stroke-linejoin="round" />
+        <!-- Bottom Stem with U-channel -->
+        <path d="M 135,290 L 135,455 L 242,455 L 242,290 L 212,290 L 212,415 C 212,415 212,425 202,425 L 175,425 C 165,425 165,415 165,415 L 165,290 Z" 
+              fill="url(#goldFill)" stroke="url(#goldEdge)" stroke-width="1.5" stroke-linejoin="round" />
+        <!-- Elegant Swoosh -->
+        <path d="M 95,340 C 100,310 130,250 205,242 C 265,232 315,190 315,190 C 315,190 285,220 235,245 C 175,275 120,305 95,340 Z" 
+              fill="url(#goldFill)" stroke="url(#goldEdge)" stroke-width="2.0" stroke-linejoin="round" />
+      </g>
+
+      <!-- 3. GLOSS HIGHLIGHT LAYER -->
+      <g pointer-events="none">
+        <!-- Upper Outer Frame & Loop Highlight -->
+        <path d="M 135,230 L 135,85 L 320,85 C 395,85 415,150 415,220 C 415,290 395,355 320,355 L 242,355 L 242,322 L 320,322 C 370,322 382,275 382,220 C 382,165 370,118 320,118 L 168,118 L 168,230 Z" 
+              fill="url(#glossHighlight)" opacity="0.35" />
+        <!-- Elegant Swoosh Highlight -->
+        <path d="M 95,340 C 100,310 130,250 205,242 C 265,232 315,190 315,190 C 315,190 285,220 235,245 C 175,275 120,305 95,340 Z" 
+              fill="url(#glossHighlight)" opacity="0.4" />
+      </g>
+    </g>
+
+    <!-- Text "PASAR UMKM TEGALSARI" Centered below the logo -->
+    <text x="540" y="1130" 
+          font-family="'Space Grotesk', 'Inter', sans-serif" 
+          font-size="44" 
+          font-weight="900" 
+          letter-spacing="12" 
+          text-anchor="middle" 
+          fill="url(#goldFill)" 
+          stroke="url(#goldEdge)" 
+          stroke-width="1.5">PASAR UMKM TEGALSARI</text>
+
+    <!-- Tagline -->
+    <text x="540" y="1190" 
+          font-family="'Inter', sans-serif" 
+          font-size="20" 
+          font-weight="600" 
+          letter-spacing="6" 
+          text-anchor="middle" 
+          fill="#ffffff" 
+          opacity="0.9">MARKETPLACE DESA MANDIRI</text>
+  </g>
+</svg>
