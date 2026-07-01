@@ -3264,8 +3264,8 @@ export default function App() {
 
       {/* MODAL 1B: Vendor Registration Modal (KTP Upload + Shop Logo + banner cover!) */}
       {showVendorRegModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 overflow-y-auto">
-          <div className="bg-white rounded-2xl w-full max-w-xl p-6 space-y-4 max-h-[92vh] overflow-y-auto shadow-xl border border-emerald-100">
+        <div className="fixed inset-0 z-50 bg-black/60 p-2 sm:p-4 overflow-y-auto flex items-start justify-center sm:items-center">
+          <div className="bg-white rounded-2xl w-full max-w-xl p-4 sm:p-6 my-4 sm:my-8 space-y-4 shadow-xl border border-emerald-100 relative">
             <div className="flex justify-between items-center border-b border-gray-100 pb-3">
               <h3 className="font-extrabold text-emerald-950 text-sm font-display flex items-center gap-1.5 uppercase tracking-wider">
                 <Store className="w-5 h-5 text-emerald-600" /> Pengajuan Mitra Toko UMKM Baru
@@ -3310,7 +3310,7 @@ export default function App() {
                   </select>
                 </div>
 
-                <div className="space-y-1 col-span-2">
+                <div className="space-y-1 col-span-1 md:col-span-2">
                   <label className="font-semibold text-gray-700">Deskripsi Ringkas Usaha & Produk</label>
                   <textarea
                     rows={2}
@@ -3323,7 +3323,7 @@ export default function App() {
                 </div>
 
                 {/* SELECT MEMBERSHIP TIER (FREE, PREMIUM, VIP) */}
-                <div className="col-span-2 space-y-2">
+                <div className="col-span-1 md:col-span-2 space-y-2">
                   <label className="font-bold text-gray-705 block text-emerald-950">Pilih Tingkat Keanggotaan (Membership Tier) *</label>
                   <p className="text-[10px] text-gray-400">Level tier menentukan batas maksimal pemajangan produk Anda di katalog.</p>
                   
@@ -3400,7 +3400,7 @@ export default function App() {
 
                 {/* MEMBERSHIP PAYMENT SECTION */}
                 {vendorRegForm.membership_tier !== 'free' && (
-                  <div className="col-span-2 p-4 bg-emerald-50/30 border border-emerald-100 rounded-2xl space-y-4 animate-in fade-in slide-in-from-top-2 duration-200">
+                  <div className="col-span-1 md:col-span-2 p-3 sm:p-4 bg-emerald-50/30 border border-emerald-100 rounded-2xl space-y-4 animate-in fade-in slide-in-from-top-2 duration-200">
                     <div className="flex items-center gap-2">
                       <CreditCard className="w-4 h-4 text-emerald-600" />
                       <span className="font-extrabold text-emerald-950 uppercase tracking-wider text-[11px]">
@@ -3637,7 +3637,7 @@ export default function App() {
                   </div>
                 )}
 
-                <div className="space-y-1 col-span-2">
+                <div className="space-y-1 col-span-1 md:col-span-2">
                   <label className="font-semibold text-gray-700">Alamat Lengkap Rumah/Toko (Tegalsari)</label>
                   <input
                     type="text"
@@ -3650,7 +3650,7 @@ export default function App() {
                 </div>
 
                 {/* Bank account details block */}
-                <div className="col-span-2 p-3 bg-slate-50 border border-slate-100 rounded-xl space-y-2.5">
+                <div className="col-span-1 md:col-span-2 p-3 bg-slate-50 border border-slate-100 rounded-xl space-y-2.5">
                   <p className="font-bold text-gray-750 text-[10.5px] uppercase tracking-wider">Rekening Bank Pencairan Hasil Penjualan</p>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                     <div className="space-y-1">
@@ -3665,7 +3665,7 @@ export default function App() {
                         ))}
                       </select>
                     </div>
-                    <div className="space-y-1 col-span-2">
+                    <div className="space-y-1 col-span-1 md:col-span-2">
                       <label className="text-[10px] text-gray-600 font-semibold">Nomor Rekening / No E-Wallet</label>
                       <input
                         type="text"
@@ -3676,7 +3676,7 @@ export default function App() {
                         className="w-full p-1.5 border border-gray-200 rounded text-xs"
                       />
                     </div>
-                    <div className="space-y-1 col-span-3">
+                    <div className="space-y-1 col-span-1 md:col-span-3">
                       <label className="text-[10px] text-gray-600 font-semibold">Atas Nama Pemegang Rekening (Harus Sesuai KTP)</label>
                       <input
                         type="text"
@@ -3690,7 +3690,7 @@ export default function App() {
                 </div>
 
                 {/* MANDATORY KTP local upload widget */}
-                <div className="space-y-1.5 col-span-2 p-3 border-2 border-dashed border-amber-300 bg-amber-50/10 rounded-xl">
+                <div className="space-y-1.5 col-span-1 md:col-span-2 p-3 border-2 border-dashed border-amber-300 bg-amber-50/10 rounded-xl">
                   <label className="font-bold text-amber-950 flex justify-between">
                     <span>File Identitas Penduduk (Foto KTP Pemilik Usaha) *</span>
                     <span className="text-[9px] text-amber-800 font-sans uppercase font-bold">Wajib diunggah!</span>
@@ -3709,7 +3709,7 @@ export default function App() {
                       </div>
                     )}
                     
-                    <div className="relative flex-1 border-2 border-dashed border-amber-200 bg-white hover:border-amber-500/50 rounded-xl p-3 text-center transition cursor-pointer group">
+                    <div className="relative w-full sm:flex-1 border-2 border-dashed border-amber-200 bg-white hover:border-amber-500/50 rounded-xl p-3 text-center transition cursor-pointer group">
                       <input
                         type="file"
                         accept="image/*"
